@@ -4,7 +4,7 @@
 
 本 Demo 使用测试机为：华为荣耀 9（7.0）、乐视 Le X620（6.0），其余手机大家可自行测试
 
-[下载 APK-Demo](apk/app-debug.apk)
+[下载 APK-Demo](https://github.com/leiyun1993/Fingerprint/raw/master/apk/app-debug.apk)
 
 开始指纹验证
 

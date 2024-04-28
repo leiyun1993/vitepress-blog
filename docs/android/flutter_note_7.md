@@ -119,16 +119,13 @@ void _initData() async {
 
 AndroidStudio 3.5 RC3
 加载不出来的话去这里[https://plugins.jetbrains.com/plugin/11415-flutterjsonbeanfactory/](https://plugins.jetbrains.com/plugin/11415-flutterjsonbeanfactory/)
-![1.jpg](https://upload-images.jianshu.io/upload_images/3891144-1cea308418af2dd8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 2、重启后使用
 
 重启之后在 new 的时候就会多一个 dart bean class File from Json 的选项
-![2.png](https://upload-images.jianshu.io/upload_images/3891144-49b54f0604ec4161.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 3、生成 dart 类
 
-![3.jpg](https://upload-images.jianshu.io/upload_images/3891144-77c23a88257698f4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 点击 make 后生成**mei_zi_entity.dart**其中**fromJson**和**toJson**就是解析的关键，实际上就是自动把 Map 中的数据取出来拼接成对象。
 
 ```dart
@@ -200,7 +197,7 @@ void _initData() async {
 }
 ```
 
-此时如果我们要使用统一的 BaseBean 去解析就存在泛型问题，由于 list 获取不到 list 的 item 的泛型,所以不可以传入 list<A>这样的泛型。所以这里我们就不在底层去处理，List 的泛型问题，而是在 BaseBean 用其他方式去绕过这个问题。（ps：我这个方法肯定不是很好，这里我们只是为了引出 EntityFactory 的使用，其他情况可根据自己的需求去封装。）
+此时如果我们要使用统一的 BaseBean 去解析就存在泛型问题，由于 list 获取不到 list 的 item 的泛型,所以不可以传入 `list<A>`这样的泛型。所以这里我们就不在底层去处理，List 的泛型问题，而是在 BaseBean 用其他方式去绕过这个问题。（ps：我这个方法肯定不是很好，这里我们只是为了引出 EntityFactory 的使用，其他情况可根据自己的需求去封装。）
 
 ### 1、EntityFactory
 
@@ -226,9 +223,7 @@ class EntityFactory {
 ```
 
 实际上他是根据这个规则生成的代码
-![4.jpg](https://upload-images.jianshu.io/upload_images/3891144-b820998a97e8c709.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 同时如果手动更改过或者是手动生成的 bean 可以点击如图所示自动更新和生成代码（ps：前提是满足上面的规则）
-![5.jpg](https://upload-images.jianshu.io/upload_images/3891144-613225fbb8d20b65.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 2、使用 EntityFactory
 

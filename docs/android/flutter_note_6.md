@@ -25,7 +25,7 @@ Waiting for another flutter command to release the startup lock。。。
 
 ### 2、使用**StaggeredGridView**
 
-大体就两种方式，一种是传入 List< Widget >另一种是用 itemBuilder 创建 item，默认提供了一下几种方法创建，根据自己的需要选择即可
+大体就两种方式，一种是传入 `List<Widget>`另一种是用 itemBuilder 创建 item，默认提供了一下几种方法创建，根据自己的需要选择即可
 
 ```dart
 StaggeredGridView()
