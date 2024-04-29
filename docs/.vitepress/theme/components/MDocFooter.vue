@@ -29,9 +29,7 @@ const isDocFooterVisible = computed(() => {
       />
       <p v-if="footer?.message">{{ footer.message }}</p>
     </div>
-    <p class="m-doc-footer-copyright" v-if="footer?.copyright">
-      {{ footer.copyright }}
-    </p>
+    <p class="m-doc-footer-copyright" v-if="footer?.copyright" v-html="footer.copyright"></p>
   </div>
 </template>
 
@@ -54,7 +52,10 @@ const isDocFooterVisible = computed(() => {
   display: flex;
   align-items: center;
 }
-
+.m-doc-footer-copyright :deep() a {
+  margin-left: 6px;
+  text-decoration: underline;
+}
 .visitor {
   margin-right: 8px;
 }

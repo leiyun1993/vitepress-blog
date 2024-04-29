@@ -46,7 +46,7 @@ export default defineConfig({
 
     footer: {
       message: '幸得识卿桃花面，自此阡陌多暖春！',
-      copyright: 'Copyright © 2024-present leiyun',
+      copyright: 'Copyright © 2024-present leiyun <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">蜀ICP备2021001297号-1</a>',
     },
 
     lastUpdated: {
